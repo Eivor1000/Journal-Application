@@ -1,4 +1,4 @@
-package com.Ayush.JournalApp.controller.entity;
+package com.Ayush.JournalApp.entity;
 
 public class JournalEntry {
 
