@@ -6,6 +6,7 @@ import com.Ayush.JournalApp.entity.User;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -24,6 +25,7 @@ public class JournalEntryServices {
         journalEntryRepository.save(journalEntry);
     }
 
+    @Transactional
     public void saveJournalEntry(JournalEntry journalEntry, String username){
         User user = userServices.findByUsername(username);
         journalEntry.setDate(LocalDateTime.now());
