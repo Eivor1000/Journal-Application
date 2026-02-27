@@ -58,8 +58,4 @@ public class JournalEntryServices {
         }
         return removed;
     }
-
-    public List<JournalEntry> findByUser(String username){
-
-    }
 }
